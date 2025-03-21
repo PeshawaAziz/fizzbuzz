@@ -11,11 +11,11 @@ public class Main {
         divisors.put(7, "Jazz");
 
         for (int i = start; i <= end; i++) {
-            System.out.println(fizzBuzz(divisors, i));
+            System.out.println(generate(divisors, i));
         }
     }
 
-    private static String fizzBuzz(HashMap<Integer, String> divisors, int num) {
+    private static String generate(HashMap<Integer, String> divisors, int num) {
         String result = "";
 
         for (Integer divisor : divisors.keySet())
