@@ -11,16 +11,20 @@ public class Main {
         divisors.put(7, "Jazz");
 
         for (int i = start; i <= end; i++) {
-            String result = "";
-
-            for (Integer divisor : divisors.keySet()) {
-                if (i % divisor == 0)
-                    result += divisors.get(divisor);
-            }
-            if (result.isEmpty())
-                result += i;
-
-            System.out.println(result);
+            System.out.println(fizzBuzz(divisors, i));
         }
+    }
+
+    private static String fizzBuzz(HashMap<Integer, String> divisors, int num) {
+        String result = "";
+
+        for (Integer divisor : divisors.keySet())
+            if (num % divisor == 0)
+                result += divisors.get(divisor);
+
+        if (result.isEmpty())
+            result += num;
+
+        return result;
     }
 }
